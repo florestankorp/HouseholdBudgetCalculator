@@ -32,4 +32,6 @@ let printResult = () => {
   resultLotte.innerHTML = shares.lotte
 }
 
+let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click'
 button.addEventListener('click', printResult)
+button.addEventListener(touchEvent, printResult)
