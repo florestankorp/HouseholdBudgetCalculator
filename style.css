@@ -1,3 +1,7 @@
+body {
+  background-color: blanchedalmond;
+}
+
 h2 {
   margin-bottom: 20px;
   margin-top: 20px;
@@ -21,6 +25,12 @@ p {
 button {
   margin-bottom: 20px;
   margin-top: 40px;
+}
+
+.calculator {
+  top: 20px;
+  box-shadow: 10px 10px #cccccc;
+  /* color: #a00; */
 }
 
 .result {

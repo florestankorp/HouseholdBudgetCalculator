@@ -1,28 +1,28 @@
 const button = document.querySelector('#calculate-button');
-const resultLotte = document.querySelector('#result-lotte');
-const resultFlorestan = document.querySelector('#result-florestan');
+const resultThelma = document.querySelector('#result-thelma');
+const resultLouise = document.querySelector('#result-louise');
 
 function collectResult() {
   let shares = {};
 
   const totalExpenses = parseInt(document.querySelector('#total-expenses').value);
-  const incomeLotte = parseInt(document.querySelector('#income-lotte').value);
-  const incomeFlorestan = parseInt(document.querySelector('#income-florestan').value);
-  const totalIncome = incomeLotte + incomeFlorestan;
+  const incomeThelma = parseInt(document.querySelector('#income-thelma').value);
+  const incomeLouise = parseInt(document.querySelector('#income-louise').value);
+  const totalIncome = incomeThelma + incomeLouise;
 
-  const shareFlorestan = incomeFlorestan / totalIncome * totalExpenses;
-  const shareLotte = incomeLotte / totalIncome * totalExpenses;
+  const shareLouise = incomeLouise / totalIncome * totalExpenses;
+  const shareThelma = incomeThelma / totalIncome * totalExpenses;
 
-  shares.florestan = shareFlorestan.toFixed(2);
-  shares.lotte = shareLotte.toFixed(2);
+  shares.thelma = shareThelma.toFixed(2);
+  shares.louise = shareLouise.toFixed(2);
 
   return shares;
 }
 
 function printResult() {
   let shares = collectResult();
-  resultFlorestan.innerHTML = `${shares.florestan} €`;
-  resultLotte.innerHTML = `${shares.lotte} €`;
+  resultThelma.innerHTML = `${shares.thelma} €`;
+  resultLouise.innerHTML = `${shares.louise} €`;
 }
 
 button.addEventListener('click', printResult);
