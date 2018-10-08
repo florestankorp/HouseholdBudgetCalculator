@@ -1,27 +1,20 @@
-let resultLotte = document.querySelector('#result-lotte')
-let resultFlorestan = document.querySelector('#result-florestan')
-
-let button = document.querySelector('#calculate-button')
+const button = document.querySelector('#calculate-button');
+const resultLotte = document.querySelector('#result-lotte');
+const resultFlorestan = document.querySelector('#result-florestan');
 
 let collectResult = () => {
+  let shares = {};
 
-  let totalExpenses = document.querySelector('#total-expenses')
-  let incomeLotte = document.querySelector('#income-lotte')
-  let incomeFlorestan = document.querySelector('#income-florestan')
+  const totalExpenses = parseInt(document.querySelector('#total-expenses').value);
+  const incomeLotte = parseInt(document.querySelector('#income-lotte').value);
+  const incomeFlorestan = parseInt(document.querySelector('#income-florestan').value);
+  const totalIncome = incomeLotte + incomeFlorestan;
 
-  let shares = {}
+  let shareFlorestan = incomeFlorestan / totalIncome * totalExpenses;
+  let shareLotte = incomeLotte / totalIncome * totalExpenses;
 
-  incomeFlorestan = parseInt(incomeFlorestan.value)
-  incomeLotte = parseInt(incomeLotte.value)
-  totalExpenses = parseInt(totalExpenses.value)
-
-  let totalIncome = incomeLotte + incomeFlorestan
-
-  let shareFlorestan = incomeFlorestan / totalIncome * totalExpenses
-  shares.florestan = shareFlorestan.toFixed(2)
-
-  let shareLotte = incomeLotte / totalIncome * totalExpenses
-  shares.lotte = shareLotte.toFixed(2)
+  shares.florestan = shareFlorestan.toFixed(2);
+  shares.lotte = shareLotte.toFixed(2);
 
   return shares
 }
@@ -32,4 +25,4 @@ let printResult = () => {
   resultLotte.innerHTML = shares.lotte
 }
 
-button.addEventListener('click', printResult)
+button.addEventListener('click', printResult);
