@@ -2,7 +2,7 @@ const button = document.querySelector('#calculate-button');
 const resultLotte = document.querySelector('#result-lotte');
 const resultFlorestan = document.querySelector('#result-florestan');
 
-let collectResult = () => {
+function collectResult() {
   let shares = {};
 
   const totalExpenses = parseInt(document.querySelector('#total-expenses').value);
@@ -10,8 +10,8 @@ let collectResult = () => {
   const incomeFlorestan = parseInt(document.querySelector('#income-florestan').value);
   const totalIncome = incomeLotte + incomeFlorestan;
 
-  let shareFlorestan = incomeFlorestan / totalIncome * totalExpenses;
-  let shareLotte = incomeLotte / totalIncome * totalExpenses;
+  const shareFlorestan = incomeFlorestan / totalIncome * totalExpenses;
+  const shareLotte = incomeLotte / totalIncome * totalExpenses;
 
   shares.florestan = shareFlorestan.toFixed(2);
   shares.lotte = shareLotte.toFixed(2);
@@ -19,7 +19,7 @@ let collectResult = () => {
   return shares
 }
 
-let printResult = () => {
+function printResult() {
   let shares = collectResult()
   resultFlorestan.innerHTML = shares.florestan
   resultLotte.innerHTML = shares.lotte
