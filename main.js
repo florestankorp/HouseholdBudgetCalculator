@@ -16,13 +16,13 @@ function collectResult() {
   shares.florestan = shareFlorestan.toFixed(2);
   shares.lotte = shareLotte.toFixed(2);
 
-  return shares
+  return shares;
 }
 
 function printResult() {
-  let shares = collectResult()
-  resultFlorestan.innerHTML = shares.florestan
-  resultLotte.innerHTML = shares.lotte
+  let shares = collectResult();
+  resultFlorestan.innerHTML = `${shares.florestan} €`;
+  resultLotte.innerHTML = `${shares.lotte} €`;
 }
 
 button.addEventListener('click', printResult);

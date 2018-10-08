@@ -8,72 +8,57 @@
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
           crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 bg-info">
-                <br>
-                <h2 class="text-white">Household Budget Distribution</h2><br>
-
+            <div class="col-3 bg-info">
+                <h2 class="text-white">Household Budget Distribution</h2>
                 <h4>Total Household Expenses</h4>
-
                 <div class="input-group">
-                    <input id="total-expenses"
+                    <input class="form-control"
+                           id="total-expenses"
                            type="number"
-                           class="form-control"
+                           value="980"
                            aria-label="Amount (to the nearest euro)">
                     <span class="input-group-addon">€</span>
                 </div>
-                <br>
                 <h4>Net Income:</h4>
                 <p>Lotte</p>
                 <div class="input-group">
-                    <input id="income-lotte"
+                    <input class="form-control"
+                           id="income-lotte"
                            type="number"
-                           class="form-control"
+                           value="1600"
                            aria-label="Amount (to the nearest euro)">
                     <span class="input-group-addon">€</span>
                 </div>
-                <br>
                 <p>Florestan</p>
                 <div class="input-group">
                     <input id="income-florestan"
                            type="number"
                            class="form-control"
+                           value="1600"
                            aria-label="Amount (to the nearest euro)">
                     <span class="input-group-addon">€</span>
                 </div>
-                <br>
                 <button type="button"
-                        class="btn btn-default"
+                        class="btn btn-lg btn-primary"
                         id="calculate-button">Calculate!</button>
-                <br><br>
-                <table class="table table-sm">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Result</th>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td>Lotte</td>
-                        <td id="result-lotte"></td>
-                    </tr>
-                    <tr>
-                        <td>Florestan</td>
-                        <td id="result-florestan"></td>
-                    </tr>
-                </table>
-
+                <h4>Result</h4>
+                <p>Lotte<span class="result"
+                          id="result-lotte"></span></p>
+                <p>Florestan<span class="result"
+                          id="result-florestan"></span></p>
             </div>
         </div>
     </div>
     <script type="text/javascript"
             src="main.js">
     </script>
-
 </body>
 
 </html>
