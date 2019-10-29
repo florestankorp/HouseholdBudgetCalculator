@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <head>
     <meta charset="utf-8">
@@ -20,7 +22,7 @@
                 <h4>Total Household Expenses</h4>
                 <div class="input-group">
                     <input class="form-control"
-                           id="total-expenses"
+                           id="expenses"
                            type="number"
                            value="980"
                            aria-label="Amount (to the nearest euro)">
@@ -45,7 +47,8 @@
                            aria-label="Amount (to the nearest euro)">
                     <span class="input-group-addon">€</span>
                 </div>
-                <button type="button"
+                <button onclick="calculate()"
+                        type="button"
                         class="btn btn-lg btn-primary"
                         id="calculate-button">Calculate!</button>
                 <h4>Result</h4>
@@ -58,7 +61,7 @@
     </div>
     <script type="text/javascript"
             src="main.js">
-    </script>
+            </script>
 </body>
 
 </html>

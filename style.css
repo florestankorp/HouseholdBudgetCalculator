@@ -1,39 +1,39 @@
 body {
-  background-color: blanchedalmond;
+    background-color: blanchedalmond;
 }
 
 h2 {
-  margin-bottom: 20px;
-  margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 h4 {
-  margin-bottom: 20px;
-  margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 h3 {
-  margin-bottom: 20px;
-  margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 p {
-  margin-bottom: 20px;
-  margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 button {
-  margin-bottom: 20px;
-  margin-top: 40px;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 .calculator {
-  top: 20px;
-  box-shadow: 10px 10px #cccccc;
-  /* color: #a00; */
+    top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .result {
-  float: right;
-  font-weight: bolder;
+    float: right;
+    font-weight: bolder;
 }
