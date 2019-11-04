@@ -1,4 +1,4 @@
-const FILES_TO_CACHE = ["/index.html", "/main.js", "/style.css"];
+const FILES_TO_CACHE = ["./index.html", "./main.js", "./style.css"];
 
 const CACHE_NAME = "pwa-app-cache";
 
