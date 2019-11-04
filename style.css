@@ -23,6 +23,10 @@ button {
     margin-top: 40px;
 }
 
+.calculator {
+    padding: 30px;
+}
+
 .result {
     float: right;
     font-weight: bolder;
