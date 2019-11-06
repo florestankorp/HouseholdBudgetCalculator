@@ -23,4 +23,9 @@ function calculate() {
   return shares;
 }
 
-// TODO: add error handling and validation
+
+/** TODO:
+ * add error handling and validation
+ * > allow only positive integers
+ * what if total is greater than combined income?
+ */
