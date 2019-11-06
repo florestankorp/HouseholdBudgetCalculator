@@ -12,13 +12,16 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
+
 h1 {
   margin: 0;
 }
@@ -54,7 +57,8 @@ input {
 
 label {
   height: 200%;
-  width: 20%; /*MOBILE*/
+  width: 35%;
+  /*MOBILE*/
   border-right: 1px solid white;
 }
 
