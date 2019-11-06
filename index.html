@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#2F3BA2" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Household Budget Shares Calculator PWA">
+    <meta name="apple-mobile-web-app-title" content="Shares Calculator PWA">
     <link rel="apple-touch-icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="">
@@ -19,34 +19,49 @@
 
 <body>
     <div class="calculator">
-
         <div>
-            <h2>Household Budget Distribution</h2>
-            <h4>Total Household Expenses</h4>
-            <input id="expenses" type="number" value="980">
-            <span>€</span>
+            <h1>Shares Calculator</h1>
+            <h4>Household Expenses</h4>
+            <div class="input-area">
+                <label for="expenses">Total</label>
+                <input id="expenses" type="number" value="980">
+                <span>€</span>
+            </div>
         </div>
 
-        <h4>Net Income:</h4>
+        <h4>Net Income</h4>
 
         <div class="income">
-            <p>Thelma</p>
-            <input id="income-thelma" type="number" value="1600">
-            <span>€</span>
+            <div class="input-area">
+                <label for="income-thelma">Thelma</label>
+                <input id="income-thelma" type="number" value="1600">
+                <span>€</span>
+            </div>
         </div>
 
         <div class="income">
-            <p>Louise</p>
-            <input id="income-louise" type="number" value="1600">
-            <span>€</span>
+            <div class="input-area">
+                <label for="income-louise">Louise</label>
+                <input id="income-louise" type="number" value="1600">
+                <span>€</span>
+            </div>
         </div>
 
-        <button onclick="calculate()" type="button" id="calculate-button">Calculate!</button>
+        <div class="button-area">
+            <button onclick="calculate()" type="button" id="calculate-button">Calculate!</button>
+        </div>
+
+        <h4>Result</h4>
 
         <div class="results">
-            <h4>Result</h4>
-            <p>Thelma<span class="result" id="result-thelma"></span></p>
-            <p>Louise<span class="result" id="result-louise"></span></p>
+            <div class="result">
+                <span>Thelma</span>
+                <span id="result-thelma"></span>
+            </div>
+            <div class="result">
+                <span>Louise</span>
+                <span id="result-louise"></span>
+            </div>
         </div>
     </div>
 </body>
