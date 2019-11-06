@@ -53,6 +53,8 @@ input {
   color: white;
   border: none;
   background: none;
+  text-align: right;
+  width: 70%;
 }
 
 input:focus {
@@ -62,8 +64,6 @@ input:focus {
 label {
   height: 200%;
   width: 22%;
-  /*MOBILE*/
-  border-right: 1px solid white;
 }
 
 .button-area {
@@ -73,11 +73,13 @@ label {
 
 .input-area {
   display: flex;
+  justify-content: flex-end;
   padding: 1rem;
   margin-bottom: 1rem;
   justify-content: space-between;
   border: 1px solid white;
   border-radius: 0.4rem;
+  align-items: baseline;
 }
 
 .result {
@@ -85,3 +87,5 @@ label {
   display: flex;
   justify-content: space-between;
 }
+
+.euro-sign {}
