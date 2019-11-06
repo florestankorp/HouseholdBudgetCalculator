@@ -3,16 +3,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./service-worker.js')
-                    .then((reg) => {
-                        console.log('Service worker registered.', reg);
-                    });
-            });
-        }
-    </script>
     <meta charset="utf-8">
     <meta name="Description" content="Calculate shares of your household expenses.">
     <title>Household Budget Shares Calculator PWA</title>
@@ -22,47 +12,55 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Household Budget Shares Calculator PWA">
-    <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="apple-touch-icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="">
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="calculator col-md-4 col-sm-6 col-xs-12">
-                <h2 class="text-muted">Household Budget Distribution</h2>
-                <h4>Total Household Expenses</h4>
-                <div class="input-group">
-                    <input class="form-control" id="expenses" type="number" value="980"
-                        aria-label="Amount (to the nearest euro)">
-                    <span class="input-group-addon">€</span>
-                </div>
-                <h4>Net Income:</h4>
-                <p>Thelma</p>
-                <div class="input-group">
-                    <input class="form-control" id="income-thelma" type="number" value="1600"
-                        aria-label="Amount (to the nearest euro)">
-                    <span class="input-group-addon">€</span>
-                </div>
-                <p>Louise</p>
-                <div class="input-group">
-                    <input id="income-louise" type="number" class="form-control" value="1600"
-                        aria-label="Amount (to the nearest euro)">
-                    <span class="input-group-addon">€</span>
-                </div>
-                <button onclick="calculate()" type="button" class="btn btn-lg btn-primary"
-                    id="calculate-button">Calculate!</button>
-                <h4>Result</h4>
-                <p>Thelma<span class="result" id="result-thelma"></span></p>
-                <p>Louise<span class="result" id="result-louise"></span></p>
-            </div>
+    <div class="calculator">
+
+        <div>
+            <h2>Household Budget Distribution</h2>
+            <h4>Total Household Expenses</h4>
+            <input id="expenses" type="number" value="980">
+            <span>€</span>
+        </div>
+
+        <h4>Net Income:</h4>
+
+        <div class="income">
+            <p>Thelma</p>
+            <input id="income-thelma" type="number" value="1600">
+            <span>€</span>
+        </div>
+
+        <div class="income">
+            <p>Louise</p>
+            <input id="income-louise" type="number" value="1600">
+            <span>€</span>
+        </div>
+
+        <button onclick="calculate()" type="button" id="calculate-button">Calculate!</button>
+
+        <div class="results">
+            <h4>Result</h4>
+            <p>Thelma<span class="result" id="result-thelma"></span></p>
+            <p>Louise<span class="result" id="result-louise"></span></p>
         </div>
     </div>
-    <script type="text/javascript" src="main.js">
-    </script>
 </body>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./service-worker.js')
+                .then((reg) => {
+                    console.log('Service worker registered.', reg);
+                });
+        });
+    }
+</script>
+<script type="text/javascript" src="main.js">
+</script>
 
 </html>
