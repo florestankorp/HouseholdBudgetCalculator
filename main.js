@@ -17,15 +17,43 @@ function calculate() {
   shares.thelma = parseInt(shareThelma);
   shares.louise = parseInt(shareLouise);
 
-  resultThelma.innerHTML = `${shares.thelma} €`;
-  resultLouise.innerHTML = `${shares.louise} €`;
+  document.querySelector('.results').innerHTML = showResults(shares.louise, shares.thelma);
 
   return shares;
 }
 
+function showResults(shareLouise, shareThelma) {
+  return `            
+  <h4>Result</h4>
+
+  <div class="result" >
+    <label>Thelma</label>
+    <span id="result-thelma">${shareThelma} €</span>
+  </div>
+
+  <div class="result" >
+    <label>Louise</label>
+    <span id="result-louise">${shareLouise} €</span>
+  </div>`
+
+}
+
+// document.querySelector("#okButton")
+//   .addEventListener("click", function (value) {
+//     document.querySelector(".calculator").hidden = true;
+//   }, false);
 
 /** TODO:
  * add error handling and validation
  * > allow only positive integers
+ * > disable paste of non int vals
  * what if total is greater than combined income?
+ * append child node when result is calculated
+  window.onload = function() {
+    const myInput = document.getElementById('myInput');
+    myInput.onpaste = function(e) {
+      e.preventDefault();
+    }
+  }
+
  */

@@ -3,10 +3,6 @@
 
 <head>
     <title>Household Budget Shares Calculator PWA</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icon.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Calculate shares of your household expenses.">
@@ -14,16 +10,21 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Shares Calculator PWA">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="">
 </head>
 
 <body>
+    <!-- <a href="#" id="okButton">Navigation</a> -->
     <div class="calculator">
         <div>
             <h1>Shares Calculator</h1>
             <h4>Household Expenses</h4>
             <div class="input-area">
                 <label for="expenses">Total</label>
-                <input id="expenses" type="number" value="980" pattern="[0-9]*">
+                <input id="expenses" type="number" value="980">
                 <span>€</span>
             </div>
         </div>
@@ -33,7 +34,7 @@
         <div class="income">
             <div class="input-area">
                 <label for="income-thelma">Thelma</label>
-                <input id="income-thelma" type="number" value="1600" pattern="[0-9]*">
+                <input id="income-thelma" type="number" value="1600">
                 <span>€</span>
             </div>
         </div>
@@ -41,26 +42,17 @@
         <div class="income">
             <div class="input-area">
                 <label for="income-louise">Louise</label>
-                <input id="income-louise" type="number" value="1600" pattern="[0-9]*">
+                <input id="income-louise" type="number" value="1600">
                 <span class="euro-sign">€</span>
             </div>
         </div>
 
         <div class="button-area">
-            <button onclick="calculate()" type="button" id="calculate-button">Calculate!</button>
+            <button onclick="calculate()" type="button" id="calculate-button">Calculate</button>
         </div>
 
-        <h4>Result</h4>
 
         <div class="results">
-            <div class="input-area">
-                <label>Thelma</label>
-                <span class="result" id="result-thelma"></span>
-            </div>
-            <div class="input-area">
-                <label>Louise</label>
-                <span class="result" id="result-louise"></span>
-            </div>
         </div>
     </div>
 </body>
