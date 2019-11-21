@@ -1,11 +1,11 @@
 body {
-  margin: 1rem 1rem 0 1rem;
-  overflow: hidden;
-  color: white;
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  margin: 1rem 1rem 0 1rem;
+  color: white;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 2500% 2500%;
-  animation: gradientBG 20s ease infinite;
+  background-size: 400% 400%;
+  animation: gradientBG 25s ease infinite;
 }
 
 @keyframes gradientBG {
@@ -22,7 +22,7 @@ body {
 
 @media only screen and (min-width: 480px) {
   body {
-    width: 25%;
+    width: 50%;
   }
 }
 
@@ -114,37 +114,4 @@ label {
   justify-content: flex-end;
   justify-content: space-between;
   align-items: baseline;
-}
-
-ol {
-  max-width: 350px;
-  list-style: none;
-  padding-left: 40px;
-}
-
-li {
-  padding: 0.5rem 0 0.5rem 0;
-}
-
-ol li {
-  margin: 0 0 0.5rem 0;
-  counter-increment: my-awesome-counter;
-  position: relative;
-}
-
-ol li::before {
-  content: counter(my-awesome-counter);
-  color: darkslategrey;
-  font-size: 1.5rem;
-  font-weight: bold;
-  position: absolute;
-  left: calc(-1 * var(--size) - 10px);
-  line-height: var(--size);
-  --size: 32px;
-  width: var(--size);
-  height: var(--size);
-  top: 0;
-  background: white;
-  border-radius: 50%;
-  text-align: center;
 }
