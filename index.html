@@ -4,27 +4,38 @@
 <head>
     <title>Household Budget Shares Calculator PWA</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Calculate shares of your household expenses.">
-    <meta name="theme-color" content="#2F3BA2" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Shares Calculator PWA">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icon.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="Description"
+          content="Calculate shares of your household expenses.">
+    <meta name="theme-color"
+          content="#2F3BA2" />
+    <meta name="apple-mobile-web-app-capable"
+          content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="black">
+    <meta name="apple-mobile-web-app-title"
+          content="Shares Calculator PWA">
+    <link rel="manifest"
+          href="manifest.json">
+    <link rel="apple-touch-icon"
+          href="icon.png">
+    <link rel="stylesheet"
+          href="style.css">
+    <link rel="shortcut icon"
+          href="">
 </head>
 
 <body>
-    <!-- <a href="#" id="okButton">Navigation</a> -->
-    <div class="calculator">
+    <section class="calculator">
         <div>
             <h1>Shares Calculator</h1>
             <h4>Household Expenses</h4>
             <div class="input-area">
                 <label for="expenses">Total</label>
-                <input id="expenses" type="number" value="980">
+                <input id="expenses"
+                       type="number"
+                       value="1200">
                 <span>€</span>
             </div>
         </div>
@@ -34,7 +45,9 @@
         <div class="income">
             <div class="input-area">
                 <label for="income-thelma">Thelma</label>
-                <input id="income-thelma" type="number" value="1600">
+                <input id="income-thelma"
+                       type="number"
+                       value="3785">
                 <span>€</span>
             </div>
         </div>
@@ -42,19 +55,23 @@
         <div class="income">
             <div class="input-area">
                 <label for="income-louise">Louise</label>
-                <input id="income-louise" type="number" value="1600">
+                <input id="income-louise"
+                       type="number"
+                       value="5112">
                 <span class="euro-sign">€</span>
             </div>
         </div>
 
         <div class="button-area">
-            <button onclick="calculate()" type="button" id="calculate-button">Calculate</button>
+            <button onclick="calculate()"
+                    type="button"
+                    id="calculate-button">Calculate</button>
         </div>
 
 
         <div class="results">
         </div>
-    </div>
+    </section>
 </body>
 <script>
     if ('serviceWorker' in navigator) {
@@ -66,7 +83,8 @@
         });
     }
 </script>
-<script type="text/javascript" src="main.js">
-</script>
+<script type="text/javascript"
+        src="main.js">
+        </script>
 
 </html>
